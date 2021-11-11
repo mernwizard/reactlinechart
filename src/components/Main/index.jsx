@@ -7,6 +7,7 @@ const Main = () => {
     <div className="container">
       <div className="detailsContainer">
         <h1>Line Chart</h1>
+        <p>Average rainfall for last 6 months</p>
       </div>
       <div className="chartContainer">
         <LineChart />

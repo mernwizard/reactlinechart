@@ -2,12 +2,15 @@
   height: 86vh;
   padding: 2vh 2rem;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
   .detailsContainer {
     padding: 1rem;
-    h1 {
-      font-size: 1.5rem;
-    }
   }
   .chartContainer {
     background: #f1f3f4;
