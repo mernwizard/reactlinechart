@@ -1,35 +1,31 @@
 import React from "react";
-import { Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
 const LineChart = () => {
-  const state = {
-    labels: ["July", "August", "September", "October", "November"],
+  const data = {
+    labels: ["1", "2", "3", "4", "5", "6"],
     datasets: [
       {
-        label: "Rainfall",
-        backgroundColor: "rgba(75,192,192,1)",
-        borderColor: "white",
-        borderWidth: 2,
-        data: [65, 59, 80, 81, 56],
+        label: "# of Votes",
+        data: [12, 19, 3, 5, 2, 3],
+        fill: false,
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgba(255, 99, 132, 0.2)",
       },
     ],
   };
+
+  const options = {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  };
+
   return (
     <>
-      <Bar
-        data={state}
-        options={{
-          title: {
-            display: true,
-            text: "Average Rainfall per month",
-            fontSize: 20,
-          },
-          legend: {
-            display: true,
-            position: "right",
-          },
-        }}
-      />
+      <Line data={data} options={options} />
     </>
   );
 };
